@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>RNode Flasher</title>
+    <title>RNode Flasher iOS</title>
 
     <script src="./js/rnode.js"></script>
     <script src="./js/nrf52_dfu_flasher.js"></script>
@@ -32,8 +32,9 @@
             <img src="reticulum_logo_512.png" class="w-14 h-14"/>
         </div>
         <div class="my-auto">
-            <div class="font-bold">RNode Flasher</div>
+            <div class="font-bold">RNode Flasher (default - cobraPA github)</div>
             <div class="text-sm">Developed by <a target="_blank" href="https://liamcottle.com" class="text-blue-500 hover:underline">Liam Cottle</a></div>
+            <div class="text-sm">iOS setup by <a target="_blank" href="https://github.com/cobraPA" class="text-blue-500 hover:underline">cobraPA</a></div>
         </div>
     </div>
 
@@ -70,13 +71,13 @@
             </button>
         </div>
 
-        <div class="border-t px-2 py-1">
+<!--        <div class="border-t px-2 py-1">
             <div class="text-sm space-x-1">
                 <span>Can't find your device? Open an issue on</span>
                 <a target="_blank" href="https://github.com/liamcottle/rnode-flasher" class="text-blue-500 hover:underline">GitHub</a>
             </div>
         </div>
-
+-->
     </div>
 
     <div class="border bg-gray-50 rounded shadow">
@@ -109,10 +110,18 @@
 
         <div class="border-t px-2 py-1 text-sm">
             <div>
-                <span>Download Firmware</span>
-                <span v-if="selectedProduct && selectedModel && recommendedFirmwareFilename">: <a target="_blank" :href="`https://github.com/markqvist/RNode_Firmware/releases/latest/download/${recommendedFirmwareFilename}`" class="text-blue-500 hover:underline">{{ recommendedFirmwareFilename }}</a></span>
+                <span>Download Firmware (cobraPA github)</span>
+                <!-- no? - https://raw.githubusercontent.com/SoliDry/api-generator/master/tests/functional/oas/openapi.yaml -->
+                 <!-- no ... https://github.com/cobraPA/RNode_bin/tree/master/webflasher/beta/${recommendedFirmwareFilename} -->
+                  <!-- no wget https://raw.github.com/jquery/jquery/master/grunt.js -->
+                    <!-- raw/refs/heads -->
+                <span v-if="selectedProduct && selectedModel && recommendedFirmwareFilename">: <a target="_blank" :href="`https://github.com/cobraPA/RNode_bin/raw/refs/heads/master/webflasher/beta/${recommendedFirmwareFilename}`" class="text-blue-500 hover:underline">{{ recommendedFirmwareFilename }}</a></span>
+            <!--    <span v-if="selectedProduct && selectedModel && recommendedFirmwareFilename">: <a target="_blank" :href="`https://github.com/markqvist/RNode_Firmware/releases/latest/download/${recommendedFirmwareFilename}`" class="text-blue-500 hover:underline">{{ recommendedFirmwareFilename }}</a></span> 
+            -->
             </div>
             <div class="space-x-1">
+                <a target="_blank" href="https://github.com/cobraPA/RNode_bin/webflasher/beta" class="text-blue-500 hover:underline">iOS BLE Firmware @ cobraPA</a>
+                <span>•</span>
                 <a target="_blank" href="https://github.com/markqvist/RNode_Firmware/releases" class="text-blue-500 hover:underline">Official Firmware</a>
                 <span>•</span>
                 <a target="_blank" href="https://github.com/liberatedsystems/RNode_Firmware_CE/releases" class="text-blue-500 hover:underline">CE Firmware</a>
@@ -881,6 +890,30 @@
                                 },
                             },
                         ],
+                    },
+                    {
+                        name: "T1000E Tracker",
+                        id: ROM.PRODUCT_SENSECAP_T1000E,
+                        platform: ROM.PLATFORM_NRF52,
+                        models: [
+                            {
+                                id: ROM.MODEL_25,
+                                name: "863-928 MHz",
+                            },
+                        ],
+                        firmware_filename: "rnode_firmware_t1000e.zip",
+                    },
+                    {
+                        name: "T1000E Tracker iOS BLE",
+                        id: ROM.PRODUCT_SENSECAP_T1000E,
+                        platform: ROM.PLATFORM_NRF52,
+                        models: [
+                            {
+                                id: ROM.MODEL_25,
+                                name: "863-928 MHz",
+                            },
+                        ],
+                        firmware_filename: "rnode_firmware_t1000e_ios.zip",
                     },
                 ],
 

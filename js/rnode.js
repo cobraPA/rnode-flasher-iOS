@@ -840,6 +840,11 @@ class ROM {
     static MODEL_16       = 0x16;
     static MODEL_17       = 0x17;
 
+    static PRODUCT_SENSECAP_T1000E = 0x24
+    static MODEL_25                = 0x25
+    static PRODUCT_WIO_1110        = 0x26
+    static MODEL_27                = 0x27
+
     static PRODUCT_HMBRW  = 0xF0
     static MODEL_FF       = 0xFF
     static MODEL_FE       = 0xFE
@@ -870,6 +875,8 @@ class ROM {
     static BOARD_LORA32_V2_0   = 0x36
     static BOARD_LORA32_V2_1   = 0x37
     static BOARD_RAK4631       = 0x51
+    static BOARD_WIO_TRACK_1110_DEV       = 0x52
+    static BOARD_SENSECAP_TRACKER_T1000E  = 0x53
 
     static MANUAL_FLASH_MODELS = [ROM.MODEL_A1, ROM.MODEL_A6]
 
