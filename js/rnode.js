@@ -844,6 +844,8 @@ class ROM {
     static MODEL_25                = 0x25
     static PRODUCT_WIO_1110        = 0x26
     static MODEL_27                = 0x27
+    static PRODUCT_ELECROW_THINKNODE_M3 = 0x23
+    static MODEL_56                = 0x56
 
     static PRODUCT_HMBRW  = 0xF0
     static MODEL_FF       = 0xFF
@@ -877,6 +879,7 @@ class ROM {
     static BOARD_RAK4631       = 0x51
     static BOARD_WIO_TRACK_1110_DEV       = 0x52
     static BOARD_SENSECAP_TRACKER_T1000E  = 0x53
+    static BOARD_THINKNODE_M3  = 0x55
 
     static MANUAL_FLASH_MODELS = [ROM.MODEL_A1, ROM.MODEL_A6]
 
